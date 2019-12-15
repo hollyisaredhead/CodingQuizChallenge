@@ -1,0 +1,12 @@
+#highScore{
+    color: purple;
+}
+
+#startBtn{
+    background-color: purple;
+    color: white;
+    border-radius: 8px;
+}
+.hide{
+    display: none;
+}
