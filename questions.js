@@ -1,8 +1,8 @@
 var questions = [
     {
-        title:"quiz",
-            choices: [],
-        answer: ""
+        title: "Commonly used data types DO NOT include:",
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
     },
     {
         title:"",
