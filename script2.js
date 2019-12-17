@@ -1,11 +1,12 @@
 var currentQuestionsIndex = 0;
 
 var questionsEl = document.getElementById("questions");
-var start = document.getElementById("startBtn")
-var optionsEl = document.getElementById("options")
-var submitEl = document.getElementById("submit")
-var choicesEl = document.getElementById("choices")
-
+var start = document.getElementById("startBtn");
+var optionsEl = document.getElementById("options");
+var submitEl = document.getElementById("submit");
+var choicesEl = document.getElementById("choices");
+var feedbackEl = document.getElementById("feeback");
+    
 function beginQuiz() {
     var startPageEl = document.getElementById("startPage");
     startPageEl.setAttribute("class", "hide");
@@ -63,9 +64,17 @@ function questionClick() {
 
     if (timer < 0) {    
         timer = 0;
-    }
+   
         
+    feedbackEl.textContent = "Incorrect";
 }
   
+    else {
+        feedbackEl.textContent = "Correct";
+    }
+
+    feedbackEl.removeAttribute("class", "hide");
+};
+
 //will begin quiz
 start.onclick = beginQuiz;
