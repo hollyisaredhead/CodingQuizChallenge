@@ -10,3 +10,10 @@
 .hide{
     display: none;
 }
+
+.choices{
+    display: inline;
+    background-color: purple;
+    color: white;
+    border-radius: 8px;
+}

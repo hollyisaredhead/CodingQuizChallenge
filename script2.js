@@ -1,10 +1,10 @@
-var currentQuestionIndex = 0;
+var currentQuestionsIndex = 0;
 
 var questionsEl = document.getElementById("questions");
 var start = document.getElementById("startBtn")
 var optionsEl = document.getElementById("options")
 var submitEl = document.getElementById("submit")
-
+var choicesEl = document.getElementById("choices")
 
 function beginQuiz() {
     var startPageEl = document.getElementById("startPage");
@@ -27,13 +27,9 @@ function beginQuiz() {
     });
     
     getQuestions();
-}
-
-function getQuestions(){
-
 };
 
-function getQuestion() {
+function getQuestions() {
  
     var currentQuestions = questions[currentQuestionsIndex];
   
@@ -59,6 +55,16 @@ function getQuestion() {
       // display on the page
       choicesEl.appendChild(choiceNode);
     });
+}
+
+function questionClick() {
+    if (this.value !== [currentQuestionsIndex].answer);
+    time -= 15;
+
+    if (timer < 0) {    
+        timer = 0;
+    }
+        
 }
   
 //will begin quiz
